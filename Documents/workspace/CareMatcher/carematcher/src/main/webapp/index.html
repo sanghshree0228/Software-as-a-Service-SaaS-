@@ -1,0 +1,487 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Care Matcher</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Cambo' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style_login.css" media="all" />
+	
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.inputfocus-0.9.min.js"></script>
+    <script type="text/javascript" src="js/jquery.main.js"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+<!-- //end-smoth-scrolling -->
+<link rel="stylesheet" type="text/css" href="css/style_common.css" />
+<link rel="stylesheet" type="text/css" href="css/style4.css" />
+</head>
+<body>
+<!--header start here-->
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="index.html">Care Matcher</a></h1>
+			    </div>
+				<!-- <div class="social-icons">
+					<ul>
+						<li><a href="#"><span class="fa"> </span></a></li>
+						<li><a href="#"><span class="tw"> </span></a></li>
+						<li><a href="#"><span class="ga"> </span></a></li>
+					</ul>
+				</div> -->
+				 <div class="clearfix"> </div>
+			  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+						<ul class="res">
+							<li><a class="scroll" data-hover="Home" href="index.html">Home</a></li>
+							<li><a class="scroll" data-hover="About" href="#about">About</a></li>
+							<li><a class="scroll" data-hover="Services" href="#services">Services</a></li>
+							<li><a class="scroll" data-hover="Gallery" href="#gallery">Gallery</a></li>
+							<li>							
+							<a id="login-trigger" href="#">
+       							 Log in <span>▼</span>
+       							 <script>$(document).ready(function(){
+       							  $('#login-trigger').click(function(){
+       							    $(this).next('#login-content').slideToggle();
+       							    $(this).toggleClass('active');          
+       							    
+       							    if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+       							      else $(this).find('span').html('&#x25BC;')
+       							    })
+       							});</script>
+      						</a>
+      						<!-- Login dropdown starts here -->
+								<div id="login-content">
+        						<form>
+          							<fieldset id="inputs">
+            							<input id="username" type="email" name="Email" placeholder="Your email address" required>   
+            							<input id="password" type="password" name="Password" placeholder="Password" required>
+          							</fieldset>
+          							<fieldset id="actions">
+            							<input type="submit" id="submit" value="Log in">
+            							<label><input type="checkbox" checked="checked"> Keep me signed in</label>
+          							</fieldset>
+        						</form>
+      							</div>
+      						</li>  
+ 							<!-- Login dropdown ends here -->
+							<!-- Register dropdown starts here -->
+							<li>							
+							<a id="register-trigger" href="#">
+       							 Register <span>▼</span>
+       							 <script>
+       							 $(document).ready(function(){
+       							  $('#register-trigger').click(function(){
+       							    $(this).next('#register-content').slideToggle();
+       							    $(this).toggleClass('active');          
+       							    
+       							     if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+       							      else $(this).find('span').html('&#x25BC;')
+       							    })
+       							});</script>
+      						</a>
+      						<!-- Register dropdown starts here -->
+								<div id="register-content">
+        						<form action="http://localhost:8080/rest/RegisterUser/registerNewUsers" method="POST" id="form-id">
+          							<fieldset id="inputs">
+          								<input id="fname" type="text" name="Fname" placeholder="First Name" required>
+          								<input id="lname" type="text" name="Lname" placeholder="Last Name" required>
+            							<input id="username" type="email" name="Email" placeholder="Email Address" required>   
+            							<input id="password" type="password" name="Password" placeholder="Password" required>
+            							<input id="phone" type="text" name="phone" placeholder="Phone Number" required>
+            							<input id="registeras" type="text" name="registeras" placeholder="Register As" required>
+          							</fieldset>
+          							<fieldset id="actions">
+            							<input type="submit" id="submit" value="Register" onclick="document.getElementById('form-id').submit();">
+            							
+          							</fieldset>
+        						</form>
+      							</div>
+      						</li>
+      						<!-- Register dropdown ends here -->
+						</ul>
+					<!-- script-for-menu -->
+						 <script>
+						   $( "span.menu" ).click(function() {
+							 $( "ul.res" ).slideToggle( 300, function() {
+							 // Animation complete.
+							  });
+							 });
+						</script>
+
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+<!--header start here-->
+<!--banner strat here-->
+<div class="banner">
+	<div class="container">
+		<div class="banner-main">
+			 <h3>Helping you find the the best care you are looking for!</h3>
+			 <!-- <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p> -->
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--banner end here-->
+<!-- 
+<div class="login" id="login">
+
+<div class="container">
+		<div class="contact-main">
+			<div class="contact-top">
+  				<form>
+    				<div>LOGIN</div>
+    					<div>Log in to your account or register to create one.</div>
+    						<div>
+      							<input type="text" id="inputName"  placeholder="Name:">
+    						</div>
+    						<div>
+      							<input type="password" id="inputPassword"  placeholder="Password:">
+    						</div>
+    						<div>
+      							<button type="submit" class="btn">SUBMIT</button>
+    						</div>
+  				</form>
+  			</div>
+		</div>
+</div>
+</div> -->
+<!--about strat here-->
+<div class="about" id="about">
+	<div class="container">
+		<div class="abou-main">
+			<div class="about-top">
+				<h2>About us</h2>
+				
+				<p>Care Matcher is County's best care match website. Our website will assist you in navigating the entire process of finding the perfect caregiver for you or your loved one.</p>
+			</div>
+			<!-- -->
+				</div>
+			  <div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--about end here-->
+<!--team start here-->
+<!-- <div class="team-mem">
+		<div class="container">
+			   <div class="team-main">
+					<div class="team-top">
+							<h3>Our Team</h3>
+					</div>
+					<div class="team-bottom">
+						<div class="col-md-3 team-grid">
+							<a href="#"> <img src="images/t1.jpg" alt="" class="img-responsive"> </a>
+						</div>
+						<div class="col-md-3 team-grid">
+							<a href="#"> <img src="images/t2.jpg" alt="" class="img-responsive"> </a>
+						</div>
+						<div class="col-md-3 team-grid">
+							<a href="#"> <img src="images/t3.jpg" alt="" class="img-responsive"> </a>
+						</div>
+						<div class="col-md-3 team-grid">
+							<a href="#"> <img src="images/t4.jpg" alt="" class="img-responsive"> </a>
+						</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+	  </div>
+</div>-->
+<!--team end  here-->
+<!--services starts here-->
+<div class="services" id="services">
+	<div class="container">
+		<div class="services-main">
+			<div class="services-top">
+				<h3>Services</h3>
+				<p>We have wide range of services</p>
+			</div>
+			<div class="services-bottom">
+			  
+				<div class="about-bottom">
+				<div class="col-md-4 about-grid">
+					<img src="images/a1.jpg" alt="" class="img-responsive">
+					<div class="grid-details">
+						<h3>Elderly Care</h3>
+						<p>We provide excellent elderly care</p>
+					</div>
+				</div>
+				<div class="col-md-4 about-grid">
+					<img src="images/a2.jpg" alt="" class="img-responsive">
+					<div class="grid-details">
+						<h3>Child Care</h3>
+						<p>We provide excellent child care</p>
+					</div>
+				</div>
+				<div class="col-md-4 about-grid">
+					<img src="images/a3.jpg" alt="" class="img-responsive">
+					<div class="grid-details">
+						<h3>Pet Care</h3>
+						<p>We provide excellent pet care</p>
+					</div> 			  
+			  
+			  
+			  
+			  
+			  <!-- <div class="hi-icon-wrap hi-icon-effect-6">
+				<div class="col-md-3 ser-grid">
+					
+					<div class="ser-icon">
+						<a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-eye-open"> </a>
+					</div>
+					<h4>Temporibus quibusdam</h4>
+					<p>But I must explain to you how all this mistaken idea of denouncing pleasure</p>
+				</div>
+				<div class="col-md-3 ser-grid">
+					<div class="ser-icon">
+				      <a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-grain"> </a>
+					</div>
+					<h4>Temporibus quibusdam</h4>
+					<p>But I must explain to you how all this mistaken idea of denouncing pleasure</p>
+				</div>
+				<div class="col-md-3 ser-grid">
+					<div class="ser-icon">
+						<a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-heart"> </a>
+					</div>
+					<h4>Temporibus quibusdam</h4>
+					<p>But I must explain to you how all this mistaken idea of denouncing pleasure</p>
+				</div>
+				<div class="col-md-3 ser-grid">
+					<div class="ser-icon">
+						<a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-tint"> </a>
+					</div>
+					<h4>Temporibus quibusdam</h4>
+					<p>But I must explain to you how all this mistaken idea of denouncing pleasure</p>
+				</div> -->
+			  </div>
+			</div> 
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--services end here-->
+<!--testimony start here-->
+<!-- 
+<div class="testmony">
+	<div class="container">
+		<div class="testmony-main">
+			<div class="col-md-4 testmo-left">
+				<img src="images/tes.jpg" alt="" class="img-responsive">
+			</div>
+			<div class="col-md-8 testmo-right">
+				<span class="quota1"> </span>
+				<h4>Nam libero tempore soluta nobis eligendi optio cumque impedit</h4>
+				<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings</p>
+			    <span class="quota2"> </span>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div> -->
+<!--testmony end here-->
+<!--gallery start here-->
+<div class="gallery" id="gallery">
+	<div class="container">
+		<div class="gallery-main">
+			<div class="gallery-top">
+				<h3>Gallery</h3>
+				<p>Here are some services we have provided. We are proud of our services</p>
+			</div>
+			<div class="gallery-bottom">
+				<div class="view view-fourth">
+                     <a href="images/g1.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="images/g1.jpg" alt="" class="img-responsive">
+                    <div class="mask">
+                         <h3>Medical</h3>
+                        <p>A wonderful serenity has taken possession of my entire soul.</p>
+                      <span class="gall">More</span>
+                    </div></a>
+                </div>
+                <div class="view view-fourth">
+                     <a href="images/g2.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="images/g2.jpg" alt="" class="img-responsive">
+                    <div class="mask">
+                          <h3>Medical</h3>
+                        <p>A wonderful serenity has taken possession of my entire soul.</p>
+                      <span class="gall">More</span>
+                    </div></a>
+                </div>
+                <div class="view view-fourth">
+                     <a href="images/g3.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="images/g3.jpg" alt="" class="img-responsive">
+                    <div class="mask">
+                          <h3>Medical</h3>
+                        <p>A wonderful serenity has taken possession of my entire soul.</p>
+                      <span class="gall">More</span>
+                    </div></a>
+                </div>
+                <div class="view view-fourth">
+                     <a href="images/g4.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="images/g4.jpg" alt="" class="img-responsive">
+                    <div class="mask">
+                          <h3>Medical</h3>
+                        <p>A wonderful serenity has taken possession of my entire soul.</p>
+                      <span class="gall">More</span>
+                    </div></a>
+                </div>
+                <div class="view view-fourth">
+                     <a href="images/g5.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="images/g5.jpg" alt="" class="img-responsive">
+                    <div class="mask">
+                          <h3>Medical</h3>
+                        <p>A wonderful serenity has taken possession of my entire soul.</p>
+                      <span class="gall">More</span>
+                    </div></a>
+                </div>
+                <div class="view view-fourth">
+                     <a href="images/g6.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="images/g6.jpg" alt="" class="img-responsive">
+                    <div class="mask">
+                        <h3>Medical</h3>
+                        <p>A wonderful serenity has taken possession of my entire soul.</p>
+                      <span class="gall">More</span>
+                    </div></a>
+                </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--gallery end here-->
+<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+</script>
+
+
+<!--advantages start here-->
+<!-- 
+<div class="advantages">
+	<div class="container">
+		<div class="advantages-main">
+			 <h3>Our Advantages</h3>
+			<div class="col-md-7 advant-left">
+				<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue weakness</p>
+				<ul>
+					<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"> </span> <a href="#">To take a trivial which of us ever </a></li>
+					<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"> </span> <a href="#">Idea denouncing pleasure praising</a></li>
+					<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"> </span><a href="#">Neque porro quisquam dolorem ipsum </a></li>
+					<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"> </span><a href="#">Quidem facilis expedita distinctio</a></li>
+					<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"> </span> <a href="#">Idea denouncing pleasure praising</a></li>
+				</ul>
+			</div>
+			<div class="col-md-5 advant-right">
+				<a href="#"><img src="images/doctor.png" alt=""></a>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--advantages end here--> -->
+<!--login start here-->
+<!-- 
+<div class="login" id="login">
+	<div class="container">
+		<div class="contact-main">
+			<div class="contact-top">
+				<h3>LOGIN</h3>
+				
+			</div>
+			<div class="contact-bottom">
+			 <form>
+				
+				<div class="col-md-6 contact-right">
+					<input type="text" placeholder="Username">
+				    <input type="text" placeholder="Pass">
+					<input type="submit" value="Send">
+				
+				</div>
+			  <div class="clearfix"> </div>
+			    </form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--concact end here--> 
+<!--map start here-->
+<!-- <div class="map">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978"> </iframe>
+</div> -->
+<!--map end here-->
+<!--footer strat here-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-main">
+		   <div class="col-md-4 ftr-grid">
+		   	<h4>About Us</h4>
+		   	<p>Care Matcher is County's best care match website. Our website will assist you in navigating the entire process of finding the perfect caregiver for you or your loved one.</p>
+		   </div>
+		   <div class="col-md-4 ftr-grid">
+		   	<h4>Address</h4>
+		   	<p>Care Matcher</p>
+		   	<p>Westhaven, CT</p>
+		   	
+		   	<p>Ph:+1203 809- 9585</p>
+		   </div>
+		  <!--  <div class="col-md-4 ftr-grid">
+		   	<h4>Newsletter</h4>
+		   	<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+		   	<input type="submit" value="Subscribe">
+		   </div> -->
+		  <div class="clearfix"> </div>
+	    </div>
+	</div>
+	<div class="copy-right">
+			<p>© 2015, Care Matcher , Westhaven CT 06516 </p>
+		</div>
+		<script type="text/javascript">
+										$(document).ready(function() {
+											/*
+											var defaults = {
+									  			containerID: 'toTop', // fading element id
+												containerHoverID: 'toTopHover', // fading element hover id
+												scrollSpeed: 1200,
+												easingType: 'linear' 
+									 		};
+											*/
+											
+											$().UItoTop({ easingType: 'easeOutQuart' });
+											
+										});
+									</script>
+						<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</div>
+<!--footer end here-->
