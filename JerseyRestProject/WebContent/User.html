@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+
+
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-confirmation.js"></script>
+<script src="js/js.cookie.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<title>Care Matcher</title>
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Cambo' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
+
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+
+<!-- Style sheet -->
+<link rel="stylesheet" type="text/css" href="css/style_login.css" media="all" />
+	
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.inputfocus-0.9.min.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.main.js"></script>
+    
+							
+    
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	
+	</script>
+<!-- //end-smoth-scrolling -->
+
+<link rel="stylesheet" type="text/css" href="css/style_common.css" />
+<link rel="stylesheet" type="text/css" href="css/style4.css" />
+
+</head>
+
+<body>
+
+	
+	
+	<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="index.html">Care Matcher</a></h1>
+			    </div>
+				
+				 <div class="clearfix"> </div>
+			  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+							<ul class="nav navbar-nav navbar-right">
+				 <li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+					aria-expanded="false"><span id="username"></span><span class="caret"></span></a> 
+					<ul class="dropdown-menu">
+						<li><a href="#" id="sign-out">Sign Out</a></li>
+					</ul>
+				</li>
+			</ul>
+					
+
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+<!--header ends here-->
+	
+	
+	
+	
+	
+	<div class="container">
+		
+		<br><br><br><div class="logo"><h4>Available Services</h4></div><br><br><br>
+		<table  id="mainTable" class="table table-hover table-striped table-bordered">
+			
+			<thead>
+			<tr>
+				<th hidden=true>User Id</th>
+				<th>Service Id</th>
+				<th>Service Name</th>
+				<th>Service Type</th>
+				<th>Company Name</th>
+				<th>Address</th>
+				<th>Apt/Suite/Other</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip Code</th>
+				<th>Phone Number</th>
+				<th>Email Address</th>
+				<th>Desciption</th>
+				<th>Enroll</th>
+			</tr>
+			</thead>
+	</table>
+		<p></p>
+		<button id="update" class="btn btn-primary btn-sm">Update List</button>
+</div>
+<div class="container">
+		
+		<br><br><br><div class="logo"><h4>My Services</h4></div><br><br><br>
+		<table  id="myservice" class="table table-hover table-striped table-bordered">
+			
+			<thead>
+			<tr>
+				<th>User Id</th>
+				<th>Service Id</th>
+				<th>Service Name</th>
+				<th>Service Type</th>
+				<th>Company Name</th>
+				<th>Address</th>
+				<th>Apt/Suite/Other</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip Code</th>
+				<th>Phone Number</th>
+				<th>Email Address</th>
+				<th>Desciption</th>
+				<th>Enroll</th>
+			</tr>
+			</thead>
+	</table>
+		<p></p>
+		
+</div>
+		<div id="alert" class="alert alert-success col-sm-offset-2 col-sm-9" role="alert" hidden=true></div>
+	
+	
+	 
+<script src="js/CustomAlert.js"></script>
+<script src="js/User.js"></script>
+<script src="js/SignOut.js"></script>
+<script src="js/myservices.js"></script>
+</body>
+
+</html>

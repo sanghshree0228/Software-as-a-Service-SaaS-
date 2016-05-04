@@ -1,0 +1,277 @@
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: right;
+  
+  border-radius: 3px;    
+}
+
+nav li {
+  float: left;          
+}
+
+nav #login , #register{
+  border-right: 1px solid #ddd;
+  /*box-shadow: 1px 0 0 #fff;  */
+}
+
+nav #login-trigger,#register-trigger,
+nav #signup a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 25px;
+  line-height: 25px;
+  font-weight: bold;
+  padding: 0 8px;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 #fff; 
+}
+
+nav #signup a {
+  border-radius: 0 3px 3px 0;
+}
+
+nav #login-trigger, #register-trigger {
+  border-radius: 3px 0 0 3px;
+}
+
+nav #login-trigger:hover,
+nav #login .active,
+nav #signup a:hover {
+  background: #fff;
+}
+nav #register-trigger:hover,
+nav #register .active,
+nav #signup a:hover {
+  background: #fff;
+}
+nav #login-content, #register-content {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 0;
+  z-index: 999;    
+
+  background-image: linear-gradient(top, #fff, #eee);  
+  padding: 15px;
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
+  border-radius: 3px 0 3px 3px;
+}
+
+nav li #login-content #register-content {
+  right: 0;
+  width: 250px;  
+}
+
+/*--------------------*/
+
+#inputs input,select {
+  background: #f1f1f1;
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 238px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #ccc inset;
+}
+
+#inputs input:focus {
+  background-color: #fff;
+  border-color: #e8c291;
+  outline: none;
+  box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+/*--------------------*/
+
+#login #actions {
+  margin: 10px 0 0 0;
+}
+
+#login #submit {    
+  background-color: #d14545;
+  background-image: linear-gradient(top, #e97171, #d14545);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+  border: 1px solid #7e1515;
+  float: left;
+  height: 30px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  font: bold 14px Arial, Helvetica;
+  color: #fff;
+}
+
+#login #submit:hover,
+#login #submit:focus {    
+  background-color: #e97171;
+  background-image: linear-gradient(top, #d14545, #e97171);
+} 
+
+#login #submit:active {   
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;   
+}
+
+#login #submit::-moz-focus-inner {
+  border: none;
+}
+
+#login label {
+  float: right;
+  line-height: 30px;
+}
+
+#login label input {
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+/*For login dropdown till here*/
+
+
+.view {
+   width: 360px;
+   height: 250px;
+   margin: 10px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+}
+.view .mask,.view .content {
+   width: 360px;
+   height: 260px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+}
+.view h3 {
+   text-transform: uppercase;
+   color: #fff;
+   text-align: center;
+   position: relative;
+   font-size: 17px;
+   padding: 10px;
+   margin: 60px 0 0 0;
+}
+.view p {
+   font-style: italic;
+   font-size: 13px;
+   position: relative;
+   color: #fff;
+   line-height: 1.8em;
+   padding: 10px 20px 20px;
+   text-align: center;
+}
+.view a.info {
+   display: inline-block;
+   text-decoration: none;
+   padding: 7px 14px;
+   background: #000;
+   color: #fff;
+   text-transform: uppercase;
+   -webkit-box-shadow: 0 0 1px #000;
+   -moz-box-shadow: 0 0 1px #000;
+   box-shadow: 0 0 1px #000;
+}
+.view a.info: hover {
+   -webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;
+}
+@media(max-width:1024px){
+.view {
+  width: 290px;
+  height: 210px;
+}
+.view .mask, .view .content {
+  width: 290px;
+  height: 210px;
+}
+.view h3 {
+  margin: 35px 0 0 0;
+}
+.view p {
+  padding: 0px 20px 20px;
+}
+}
+@media(max-width:768px){
+.view {
+  width: 220px;
+  height: 159px;
+}
+.view .mask, .view .content {
+  width: 220px;
+  height: 160px;
+}
+.view h3 {
+  margin: 15px 0 0 0;
+  font-size: 13px;
+  padding: 7px;
+}
+span.gall {
+  font-size: 0.9em;
+}
+}
+@media(max-width:640px){
+.view {
+  width: 177px;
+  height: 127px;
+}
+.view .mask, .view .content {
+  width: 178px;
+  height: 128px;
+}
+.view h3 {
+  font-size: 11px;
+  padding: 7px;
+  margin: 8px 0 0 0;
+}
+.view p {
+  font-size: 12px;
+  padding: 2px 6px 7px;
+}
+span.gall {
+  font-size: 0.75em;
+  padding: 0.3em 1em;
+}
+}
+@media(max-width:480px){
+.view {
+  width: 196px;
+}	
+.view .mask, .view .content {
+  width: 196px;
+}
+}
+@media(max-width:320px){
+.view {
+  width: 250px;
+  height: 162px;
+}
+.view .mask, .view .content {
+ width: 250px;
+  height: 162px;
+}
+.view h3 {
+  margin: 40px 0 0 0;
+}
+}
