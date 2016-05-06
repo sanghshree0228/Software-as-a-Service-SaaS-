@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+
+
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-confirmation.js"></script>
+<script src="js/js.cookie.js"></script>
+
+<link href="css/index.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/Admin.css" rel="stylesheet">
+<title>Care Matcher</title>
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Cambo' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
+
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+
+<!-- Style sheet -->
+<link rel="stylesheet" type="text/css" href="css/style_login.css" media="all" />
+	
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.inputfocus-0.9.min.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.main.js"></script>
+    
+							
+    
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	
+	</script>
+<!-- //end-smoth-scrolling -->
+
+<link rel="stylesheet" type="text/css" href="css/style_common.css" />
+<link rel="stylesheet" type="text/css" href="css/style4.css" />
+
+</head>
+
+<body>
+
+	
+	
+	<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="header-left">
+				<div class="logo">
+				   <h1><a href="index.html">Care Matcher</a></h1>
+			    </div>
+				
+				 <div class="clearfix"> </div>
+			  </div>
+				<div class="top-navg">
+					   <span class="menu"> <img src="images/icon.png" alt=""/></span>
+					<nav class="cl-effect-16">
+							<ul class="nav navbar-nav navbar-right">
+				 <li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+					aria-expanded="false"><span id="username"></span><span class="caret"></span></a> 
+					<ul class="dropdown-menu">
+						<li><a href="#" id="sign-out">Sign Out</a></li>
+					</ul>
+				</li>
+			</ul>
+				
+					<!-- script-for-menu -->
+					
+
+					</nav>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+<!--header ends here-->
+	
+	
+	
+	
+	
+	<div class="container">
+	<div class="logo"><h4>My Services</h4></div><br><br><br>
+		<table id="mainTable" class="table table-hover table-striped table-bordered">
+			<tr>
+				<th>User Id</th>
+				<th>Service Id</th>
+				<th>Service Name</th>
+				<th>Service Type</th>
+				<th>Company Name</th>
+				<th>Address</th>
+				<th>Apt/Suite/Other</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip Code</th>
+				<th>Phone Number</th>
+				<th>Email Address</th>
+				<th>Desciption</th>
+				<th>Delete</th>
+			</tr>
+		</table>
+		<p></p>
+		<!-- <button id="update" class="btn btn-primary btn-sm">Update List</button> -->
+		<form>
+			<table id="newUserTable" class="table table-hover table-striped table-bordered">
+				<br><br><br><div class="logo"><h4>Add new Services</h4></div>
+				<br><br><br>
+				<tr>
+					
+				<th>Service Name</th>
+				<th>Service Type</th>
+				<th>Company Name</th>
+				<th>Address</th>
+				<th>Apt/Suite/Other</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip Code</th>
+				<th>Phone Number</th>
+				<th>Email Address</th>
+				<th>Desciption</th>
+				</tr>
+				<tr>
+									
+					<td><input id="newServiceName" type="text" value="TestServiceName" required/></td>
+					<td>
+					<select id="newServiceType" class="form-control" required>
+							<option value="Elder Care">Elder Care</option>
+							<option value="Child Care">Child Care</option>
+							<option value="Pet Care">Pet Care</option>
+							</select></td>
+					<td><input id="newCompanyName" type="text" value="TestCompanyName" required/></td>
+					<td><input id="newAddress" type="text" value="TestAddress" required/></td>
+					<td><input id="newAptSuiteOther" type="text" value=""/></td>
+					<td><input id="newCity" type="text" value="TestCity" required/></td>
+					<td>
+						<select id="newState" class="form-control" required>
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CO">Colorado</option>
+							<option value="CT">Connecticut</option>
+							<option value="DE">Delaware</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="HI">Hawaii</option>
+							<option value="ID">Idaho</option>
+							<option value="IL">Illinois</option>
+							<option value="IN">Indiana</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="KY">Kentucky</option>
+							<option value="LA">Louisiana</option>
+							<option value="ME">Maine</option>
+							<option value="MD">Maryland</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MI">Michigan</option>
+							<option value="MN">Minnesota</option>
+							<option value="MS">Mississippi</option>
+							<option value="MO">Missouri</option>
+							<option value="MT">Montana</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NH">New Hampshire</option>
+							<option value="NJ">New Jersey</option>
+							<option value="NM">New Mexico</option>
+							<option value="NY">New York</option>
+							<option value="NC">North Carolina</option>
+							<option value="ND">North Dakota</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="OR">Oregon</option>
+							<option value="PA">Pennsylvania</option>
+							<option value="RI">Rhode Island</option>
+							<option value="SC">South Carolina</option>
+							<option value="SD">South Dakota</option>
+							<option value="TN">Tennessee</option>
+							<option value="TX">Texas</option>
+							<option value="UT">Utah</option>
+							<option value="VT">Vermont</option>
+							<option value="VA">Virginia</option>
+							<option value="WA">Washington</option>
+							<option value="WV">West Virginia</option>
+							<option value="WI">Wisconsin</option>
+							<option value="WY">Wyoming</option>
+						</select>
+					</td>
+					<td><input id="newZipCode" type="text" value="00000" required/></td>
+					<td><input id="newPhoneNumber" type="text" value="0000000000" required/></td>
+					<td><input id="newEmailAddress" type="text" value="test@test.test" required/></td>
+					<td><input id="newDescription" type="text" value="TestDescription" required/></td>
+				</tr>
+			</table>
+		<button id="add" class="btn btn-primary btn-sm" type="submit">Create New Service</button>
+	</form>
+	
+	<br><br><br><div class="logo"><h4>My Requests</h4></div><br><br><br>
+		<table id="myTable" class="table table-hover table-striped table-bordered">
+			<tr>
+				<th>Service Requested</th>
+				<th>Service Type</th>
+				<th>Requester First Name</th>
+				<th>Requester Last Name</th>
+				<th>Requester Phone</th>
+				<th>Requester Email</th>
+				
+			</tr>
+		</table>
+		<p></p>
+	
+	
+	<p></p>
+	<div id="alert" class="alert alert-danger" role="alert" hidden=true></div>
+</div>
+<script src="js/CustomAlert.js"></script>
+<script src="js/Admin.js"></script>
+<script src="js/SignOut.js"></script>
+<script src="js/request.js"></script>
+</body>
+
+</html>
